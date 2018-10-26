@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 62ed37d54f4556e478c51b5a81e0f567
+timeCreated: 1539893368
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Creepster
+  fontNames:
+  - Creepster
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
