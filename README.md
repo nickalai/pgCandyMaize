@@ -1,5 +1,5 @@
 # pgCandyMaize
-10/26 Halloween themed Workshop project file for Panther Games.
+10/26 Halloween themed Workshop project file for Panther Games. Simple maze game used to teach Unity to beginners.
 
 Scripts written by Nick Lai (lai137@mail.chapman.edu)
 
