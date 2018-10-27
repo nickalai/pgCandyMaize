@@ -1,5 +1,5 @@
 # pgCandyMaize
-10/26 Halloween themed Workshop project file for Chapman University's Panther Games Club. Simple maze game that is used to teach Unity to beginners. Project file contains a Demo Scene (used to show how the project works) and a Dev Scene (used to allow those participating to create their own maze).
+10/26 Halloween themed workshop Unity project file for Chapman University's Panther Games Club. Simple maze game that is used to teach Unity to beginners. Project file contains a Demo Scene (used to show how the project works) and a Dev Scene (used to allow those participating to create their own maze).
 
 # Setup
 1. Download and extract the project folder into the directory of your choice.
