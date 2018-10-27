@@ -4,9 +4,10 @@
 # Setup
 1. Download and extract the project folder into the directory of your choice.
 2. Launch Unity and use the Open button to navigate to the project folder.
-3. Double click the DemoScene under the Scenes folder for a preview of the mechanics of the maze.
-4. Double click the DevScene to design your own maze by dragging in GameObjects from the "PREFABS" folder.
-  4.1. In the CollectibleFlashlight object, you must assign the flashlight object that is childed under the FPScontroller to FlashLightGO
+3. Change the resolution to "Standalone 1024x768"
+4. Double click the DemoScene under the Scenes folder for a preview of the mechanics of the maze.
+5. Double click the DevScene to design your own maze by dragging in GameObjects from the "PREFABS" folder.
+  5.1. In the CollectibleFlashlight object, you must assign the flashlight object that is childed under the FPScontroller to FlashLightGO
 
 This project was developed in Unity 2017.1.1f1
 
