@@ -8,8 +8,12 @@
 4. Double click the DemoScene under the Scenes folder for a preview of the mechanics of the maze.
 5. Double click the DevScene to design your own maze by dragging in GameObjects from the "PREFABS" folder.
 6. In the CollectibleFlashlight object, you must assign the flashlight object that is childed under the FPScontroller to FlashLightGO
+7. Make sure to drag in a StartGate, an EndGate, and Collectibles
 
 This project was developed in Unity 2017.1.1f1
+
+# Building the Project
+To build the project, navigate to File -> Build Settings. If a new scene is created, make sure to add it to the build settings. Make sure that only the scene that you wish to have built is checkmarked. Finally, press build and enjoy! The game allows for a spacebar press to restart the level during the Win/Loss screens, and Escape can be pressed at any time to exit the project.
 
 # Credits
 Scripts written by Nick Lai (lai137@mail.chapman.edu)
