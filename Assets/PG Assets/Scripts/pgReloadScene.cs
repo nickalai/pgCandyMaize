@@ -14,7 +14,6 @@ using UnityEngine.SceneManagement;
 
 public class pgReloadScene : MonoBehaviour
 {
-    public string sceneName;
     //reloads the current scene when spacebar is pressed
 	void Update ()
     {
@@ -27,6 +26,7 @@ public class pgReloadScene : MonoBehaviour
     //logic for finding the scene
     void LoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }
