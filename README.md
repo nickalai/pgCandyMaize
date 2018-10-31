@@ -16,7 +16,7 @@ This project was developed in Unity 2017.1.1f1
 To build the project, navigate to File -> Build Settings. If a new scene is created, make sure to add it to the build settings. Make sure that only the scene that you wish to have built is checkmarked. Finally, press build and enjoy! The game allows for a spacebar press to restart the level during the Win/Loss screens, and Escape can be pressed at any time to exit the project.
 
 ## Credits
-Scripts written by Nick Lai (lai137@mail.chapman.edu)
+Scripts written by and some 3D assets created by Nick Lai (github.com/nickalai, lai137@mail.chapman.edu)
 
 3D Art assets created by Kevin Horii (horii100@mail.chapman.edu)
 
