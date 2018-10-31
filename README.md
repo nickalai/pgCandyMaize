@@ -7,7 +7,7 @@
 3. Change the resolution to "Standalone 1024x768"
 4. Double click the DemoScene under the Scenes folder for a preview of the mechanics of the maze.
 5. Double click the DevScene to design your own maze by dragging in GameObjects from the "PREFABS" folder.
-  5.1. In the CollectibleFlashlight object, you must assign the flashlight object that is childed under the FPScontroller to FlashLightGO
+6. In the CollectibleFlashlight object, you must assign the flashlight object that is childed under the FPScontroller to FlashLightGO
 
 This project was developed in Unity 2017.1.1f1
 
