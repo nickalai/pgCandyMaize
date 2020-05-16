@@ -2,8 +2,8 @@
 Simple maze game that is used to teach Unity to beginners. The project file contains a Demo Scene (used to show how the project works) and a Dev Scene (used to allow those participating to create their own maze).
 
 ## Setup
-1. Download and extract the project folder into the directory of your choice.
-2. Install Unity version 2019.2.3f1, if not already installed.
+1. Install Unity version 2019.2.3f1, if not already installed.
+2. Download and extract the project folder into the directory of your choice.
 3. Launch Unity and use the Open button to navigate to the project folder.
 4. Change the resolution to "Standalone 1024x768" in the Game display window
 5. Double click the DemoScene under the Scenes folder for a preview of the mechanics of the maze.
