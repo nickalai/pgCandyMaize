@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Contains the logic for the start gate of the maze
 */
@@ -14,6 +12,7 @@ using UnityEngine.UI;
 
 public class pgStartMaze : MonoBehaviour
 {
+    #region Variables
     public Animator anim;
 
     public pgGameManager gm;
@@ -26,8 +25,10 @@ public class pgStartMaze : MonoBehaviour
     public AudioSource source;
     public AudioClip gateOpening;
 
-	// Use this for initialization
-	void Start ()
+    #endregion
+    #region Methods
+    // Use this for initialization
+    void Start ()
     {
         anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
@@ -36,7 +37,7 @@ public class pgStartMaze : MonoBehaviour
         fl = GameObject.FindGameObjectWithTag("FLCollectible").GetComponent<pgFLCollectible>();
 	}
 
-    //upon entering the trigger, if the player has collected the flashlight, then the gate opens, plays a sound, updates the message text and starts the timer
+    // Opens the gate, plays a sound effect, and starts a timer if the player has collected the Flashlight object
     void OnTriggerEnter()
     {
         if(fl.FlashLightGO.activeSelf == true)
@@ -48,7 +49,7 @@ public class pgStartMaze : MonoBehaviour
         }
     }
 
-    //removes the gate and adds a wall of corn upon exiting the trigger
+    // Removes the gate and adds a wall of corn upon exiting the trigger
     void OnTriggerExit()
     {
         if (fl.FlashLightGO.activeSelf == true)
@@ -57,4 +58,6 @@ public class pgStartMaze : MonoBehaviour
             gate.SetActive(false);
         }
     }
+
+    #endregion
 }

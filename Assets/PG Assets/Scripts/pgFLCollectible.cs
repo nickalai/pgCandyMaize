@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Contains the logic for the flashlight collectible
 */
@@ -13,6 +11,7 @@ using UnityEngine;
 
 public class pgFLCollectible : MonoBehaviour
 {
+    #region Variables
     public pgUIManager ui;
 
     public GameObject FlashLightGO;
@@ -24,7 +23,8 @@ public class pgFLCollectible : MonoBehaviour
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
 
-
+    #endregion
+    #region Methods
     // Use this for initialization
     void Start()
     {
@@ -35,19 +35,22 @@ public class pgFLCollectible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //spins the flashlight
+        // Spins the object
         transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed, Space.World);
-        //floats up and down with a Sin()
+        
+        // Bobs the object up and down
         tempPos = posOffset;
         tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
         transform.position = tempPos;
     }
 
-    //destroys the flashlight on the floor, activates flashlight in hand, and updates the message text
+    // Destroys the object when collected and activates the Flashlight in hand. 
     void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
         FlashLightGO.SetActive(true);
         ui.messageText.text = "Enter the maze!";
     }
+
+    #endregion
 }

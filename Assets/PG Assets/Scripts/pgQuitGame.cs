@@ -1,8 +1,7 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
+
 
 Quits the game when the escape key is hit
 */
@@ -13,12 +12,15 @@ using UnityEngine;
 
 public class pgQuitGame : MonoBehaviour
 {
-	void Update ()
+    #region Methods
+    void Update ()
     {
 		if(Input.GetKey("escape"))
         {
             Application.Quit();
-            Debug.Log("Quitting game..."); //editor use for making sure the esc key is registering
+            Debug.Log("Quitting game..."); // Editor use for showing that the game would have been exited
         }
 	}
+
+    #endregion
 }

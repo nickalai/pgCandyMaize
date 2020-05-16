@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Contains the logic for reloading the current scene
 */
@@ -14,8 +12,9 @@ using UnityEngine.SceneManagement;
 
 public class pgReloadScene : MonoBehaviour
 {
-    //reloads the current scene when spacebar is pressed
-	void Update ()
+    #region Methods
+    // Reloads the current scene when spacebar is pressed
+    void Update ()
     {
 		if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -23,10 +22,12 @@ public class pgReloadScene : MonoBehaviour
         }
 	}
 
-    //logic for finding the scene
+    // Contains logic for finding the current scene
     void LoadScene()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+
+    #endregion
 }

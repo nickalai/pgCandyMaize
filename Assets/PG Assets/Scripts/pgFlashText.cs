@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Contains the logic for flashing text on the screen. Used to flash the text for restarting the game.
 */
@@ -13,16 +11,19 @@ using UnityEngine;
 
 public class pgFlashText : MonoBehaviour
 {
+    #region Variables
     public bool isOn = false;
     public GameObject textToFlash;
 
-	//Constantly instantiates "ToggleObject" method.
-	void Start ()
+    #endregion
+    #region Methods
+    // Constantly instantiates "ToggleObject" method at a rate of once per second.
+    void Start ()
     {
         InvokeRepeating("ToggleObject", 0.1f, 1f);
 	}
 	
-    //turns the object on and off
+    // Turns the object on and off
     void ToggleObject()
     {
         if (isOn)
@@ -36,4 +37,6 @@ public class pgFlashText : MonoBehaviour
             isOn = true;
         }
     }
+
+    #endregion
 }

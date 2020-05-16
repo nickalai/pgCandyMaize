@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Contains the logic for the winning gate
 */
@@ -13,6 +11,7 @@ using UnityEngine;
 
 public class pgWinZone : MonoBehaviour
 {
+    #region Variables
     public Animator anim;
 
     public pgGameManager gm;
@@ -22,6 +21,8 @@ public class pgWinZone : MonoBehaviour
     public AudioSource source;
     public AudioClip gateOpening;
 
+    #endregion
+    #region Methods
     // Use this for initialization
     void Start()
     {
@@ -32,7 +33,7 @@ public class pgWinZone : MonoBehaviour
         cm = GameObject.FindGameObjectWithTag("GameManager").GetComponentInChildren<pgCollectibleManager>();
     }
 
-    /*When entering the trigger, checks for collection of all candy corn. If all is collected, changes the message text, stops the timer, opens the final gate,
+    /* When entering the trigger, checks for collection of all candy corn. If all is collected, changes the message text, stops the timer, opens the final gate,
        plays a noise, and shows the win screen when the animation completes. If all candy corn is not collected, the gate will not open and the message text will
        prompt the player to collect more candy corn. 
     */
@@ -52,15 +53,17 @@ public class pgWinZone : MonoBehaviour
         }
     }
 
-    //calls game manager logic for showing the win screen
+    // Makes a call to pgGameManager to show the ending win screen.
     void DelayWin()
     {
         gm.ShowWinScreen();
     }
 
-    //re-updates the text once the trigger is exited
+    // Re-updates the text once the trigger is exited
     void OnTriggerExit(Collider other)
     {
         ui.messageText.text = "Collect candy corn!";
     }
+
+    #endregion
 }

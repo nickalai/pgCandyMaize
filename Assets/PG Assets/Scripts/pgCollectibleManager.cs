@@ -1,8 +1,6 @@
 ﻿/*
 Name: Nick Lai
-Student ID#: 2282417
 Chapman email: lai137@mail.chapman.edu
-Course Number and Section: Panther Games 10/26 Workshop
 
 Keeps track of candy corn collectibles and holds the logic.
 */
@@ -13,6 +11,7 @@ using UnityEngine;
 
 public class pgCollectibleManager : MonoBehaviour
 {
+    #region Variables
     public pgUIManager ui;
 
     public int collectiblesRemaining;
@@ -21,28 +20,29 @@ public class pgCollectibleManager : MonoBehaviour
 
     public AudioSource source;
     public AudioClip collectNoise;
-  
 
-	// Use this for initialization
-	void Start ()
+    #endregion
+    #region Methods
+    // Use this for initialization
+    void Start()
     {
-        //checks the scene for the amount of collectibles
+        // Checks the scene for the amount of collectibles remaining
         collectiblesRemaining = GameObject.FindGameObjectsWithTag("Collectible").Length;
         source = GetComponent<AudioSource>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        //updates the UI
+        // Updates the UI to show how many collectibles remain in play
         ui.collectibleText.text = collectiblesRemaining.ToString();
         if (collectiblesRemaining < 1)
         {
             ui.messageText.text = "Find the exit!";
         }
-	}
+    }
 
-    //logic for candy corn collection
+    // Contains logic for candy corn collection
     public void CollectCandy(GameObject candy)
     {
         Destroy(candy);
@@ -51,7 +51,7 @@ public class pgCollectibleManager : MonoBehaviour
         Invoke("ActivateKey", 1f);
     }
 
-    //changes the last candy corn into a key candy
+    // Changes the last candy corn into a key candy
     public void ActivateKey()
     {
         if (collectiblesRemaining == 1)
@@ -61,4 +61,6 @@ public class pgCollectibleManager : MonoBehaviour
             lastCandy.keyCorn.SetActive(true);
         }
     }
+
+    #endregion
 }
